@@ -1,12 +1,23 @@
 <template>
-  <router-link to="/">frank</router-link> |||<router-link to="/2">frank2</router-link>
-  <router-view></router-view>
+  <router-view />
 </template>
 
-<script>
-import Frank from './components/Frank.vue'
+<script lang="ts">
+import { ref, provide } from 'vue'
+import { router } from './router'
 
 export default {
-  name: 'App'
+  name: 'App',
+  setup() {
+    const width = document.documentElement.clientWidth;
+    const menuVisible = ref(width <= 500 ? false : true);
+    provide('menuVisible', menuVisible);
+
+    router.afterEach(() => {
+      if(width < 500) {
+        menuVisible.value = false
+      }
+    })
+  }
 }
 </script>
