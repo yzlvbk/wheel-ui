@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import ZSwitch from "../lib/Switch.vue";
+import ZSwitch from "../../lib/Switch.vue";
 import { ref } from "vue";
 export default {
   name: 'switch-demo',
