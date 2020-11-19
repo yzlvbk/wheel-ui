@@ -78,14 +78,18 @@ export default {
   > aside {
     flex-shrink: 0;
     transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+    transform: translateX(-200px);
+    // border-right: 1px solid #ebebeb;
+
     &.aside-menu {
-      transform: translateX(-200px);
+      transform: translateX(0px);
     }
   }
+
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    // background: lightgreen;
   }
 }
 aside {
@@ -100,30 +104,26 @@ aside {
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
   }
   > ol {
     > li {
       > a {
-        padding: 7px 16px;
+        padding: 8px 22px;
         display: block;
-      }
+        color: #444;
+        font-size: 14px;
+        background: #fff;
 
-      // vue自带选中a标签增加的class
-      .router-link-active {
-        position: relative;
-        background: linear-gradient(
-          145deg,
-          rgb(239, 228, 255) 0%,
-          rgb(206, 187, 232) 100%
-        );
+        // vue自带选中a标签增加的class
+        &.router-link-active {
+          color: rgb(110, 2, 195);
+        }
 
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-          border-right: 3px solid rgb(110, 2, 195);
+        &:hover {
+          color: rgb(110, 2, 195);
         }
       }
     }
@@ -131,14 +131,5 @@ aside {
 }
 main {
   overflow: auto;
-}
-
-@media (max-width: 500px) {
-  .aside-menu {
-    transform: translateX(0px) !important;
-    z-index: 1;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
 }
 </style>

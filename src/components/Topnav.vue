@@ -67,6 +67,7 @@ export default {
   align-items: center;
   color: #69258d;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
 
   > .logo {
     max-width: 6em;
