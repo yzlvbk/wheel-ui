@@ -18,11 +18,12 @@
         >
           <use xlink:href="#icon-Vue"></use>
         </svg>
-        <div>
+        <div class="item-desc">
           <div class="title">基于Vue3</div>
           <div class="d-x">使用了Vue3 Composition API</div>
         </div>
       </div>
+
       <div class="item">
         <svg
           class="icon"
@@ -30,11 +31,12 @@
         >
           <use xlink:href="#icon-typescript"></use>
         </svg>
-        <div>
+        <div class="item-desc">
           <div class="title">基于Typescript</div>
           <div class="d-x">源代码采用Typescript书写（非常严格）</div>
         </div>
       </div>
+
       <div class="item">
         <svg
           class="icon"
@@ -42,7 +44,7 @@
         >
           <use xlink:href="#icon-tubiao06"></use>
         </svg>
-        <div>
+        <div class="item-desc">
           <div class="title">代码易读</div>
           <div class="d-x">每个组件的源代码都极其简洁</div>
         </div>
@@ -111,9 +113,10 @@ $border_radius: 4px;
     flex: 1;
     display: flex;
     justify-content: center;
+    padding-left: 10px;
     > svg {
-      width: 45px;
-      height: 45px;
+      width: 60px;
+      height: 60px;
       margin-right: 15px;
     }
     .title {
@@ -152,23 +155,30 @@ $border_radius: 4px;
   }
   .features {
     flex-direction: column;
-    padding-top: 10px;
+    align-items: center;
+    padding-top: 20px;
     .item {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      width: 300px;
-      padding: 0 40px 30px;
-      .title {
-        font-size: 20px;
-      }
-      .d-x {
-        font-size: 14px;
-        line-height: 20px;
-      }
+      display: flex;
+      text-align: left;
+      justify-content: flex-start;
+      width: 75%;
+      padding: 30px 0px 0;
+
       > svg {
         margin-bottom: 10px;
-        margin-right: 0;
+        margin-right: 10px;
+        height: 60px;
+        width: 60px;
+      }
+
+      > .item-desc {
+        .title {
+          font-size: 16px;
+        }
+        .d-x {
+          font-size: 14px;
+          // line-height: 20px;
+        }
       }
     }
   }
